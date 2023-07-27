@@ -1,0 +1,55 @@
+# Project Title
+
+ETH 
+
+## Description
+
+This project contains codes solely for using Metacrafter tokens, These line of code is capable of burn, mint and balances functionalities.
+
+## Getting Started
+
+* To download this code I have made, please refer to "https://github.com/champagnesevy/metacrafter/blob/main/ETH"
+
+### Executing program
+
+For us to be able to execute this program,  we would need to start off with these line of codes:
+
+  // public variables here
+    string public tokenName = "SEV";
+    string public tokenAbbrv = "ETH";
+    uint public totalSupply = 0;
+
+Hence would follow these lines of codes as well in order for the program to run properly in "remix.ethereum.org"
+
+  // mapping variable here
+    mapping(address => uint) public balances;
+
+    // mint function
+    function mint (address _address, uint _value) public{
+        totalSupply += _value;
+        balances [_address] += _value;
+    }
+
+    // burn function
+    function burn (address _address, uint _value) public{
+        if (balances[_address] >=_value) {
+
+        totalSupply -= _value;
+        balances [_address] -= _value;
+
+## Help
+MAKE SURE EVERYTHINNG IS CORRECT AND AVOID ANY TYPO ERRORS
+```
+## Author
+Yves Joseph Santos 
+@champagnesevy 
+
+Contributors names and contact info
+
+ex. Dominique Pizzie  
+ex. [@DomPizzie](https://twitter.com/dompizzie)
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
